@@ -43,7 +43,7 @@ function paintGreetings(username) {
 
   greeting.innerText = greetingMessage;
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  mainWindow.classList.remove(HIDDEN_CLASSNAME);
+  mainWindow.style.display = 'block';
 }
 
 // Check if a username is saved in local storage
@@ -51,8 +51,8 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
   // if no username is saved, show the login form and add a submit event listener
+  mainWindow.style.display = 'none';
   loginForm.classList.remove(HIDDEN_CLASSNAME);
-  mainWindow.classList.add(HIDDEN_CLASSNAME);
   loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   // if a username is saved, display a greeting message
