@@ -32,4 +32,6 @@ function onGeoError() {
 }
 
 // Call the geolocation API to get the user's current position
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+if (localStorage.getItem('username') !== null) {
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+}

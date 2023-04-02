@@ -9,5 +9,9 @@ const chosenImageFilename =
 const backgroundImageElement = document.createElement('img');
 backgroundImageElement.src = `img/${chosenImageFilename}`;
 
-// Add the image element to the body of the document
-document.body.appendChild(backgroundImageElement);
+// Set CSS styles to make the image the background of the page
+document.body.style.backgroundImage = `url(${backgroundImageElement.src})`;
+document.body.style.backgroundRepeat = 'no-repeat';
+document.body.style.backgroundSize = 'cover';
+document.body.style.backgroundPosition = 'center';
+document.body.style.opacity = '0.8';
