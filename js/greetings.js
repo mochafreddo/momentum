@@ -44,6 +44,9 @@ function paintGreetings(username) {
   greeting.innerText = greetingMessage;
   greeting.classList.remove(HIDDEN_CLASSNAME);
   mainWindow.style.display = 'block';
+
+  // Execute the navigator.geolocation.getCurrentPosition function
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }
 
 // Check if a username is saved in local storage
