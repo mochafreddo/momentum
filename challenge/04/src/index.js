@@ -1,6 +1,6 @@
 // <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
-const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
+import './styles.css';
+const colors = ['#1abc9c', '#3498db', '#9b59b6', '#f39c12', '#e74c3c'];
 // <⚠️ /DONT DELETE THIS ⚠️>
 
 /*
@@ -13,27 +13,27 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 ✅ ALL function handlers should be INSIDE of "superEventHandler"
 */
 const superEventHandler = {
-  handleMouseOver: () => {
-    title.innerText = "The mouse is here!";
+  onMouseOver: () => {
+    title.innerText = 'The mouse is here!';
     title.style.color = colors[0];
   },
-  handleMouseLeave: () => {
-    title.innerText = "The mouse is gone!";
+  onMouseLeave: () => {
+    title.innerText = 'The mouse is gone!';
     title.style.color = colors[1];
   },
-  handleResize: () => {
-    title.innerText = "You just resized!";
+  onResize: () => {
+    title.innerText = 'You just resized!';
     title.style.color = colors[2];
   },
-  handleContextMenu: () => {
-    title.innerText = "That was a right click!";
+  onContextMenu: () => {
+    title.innerText = 'That was a right click!';
     title.style.color = colors[3];
   },
 };
 
-const title = document.querySelector("h2");
+const title = document.querySelector('h2');
 
-title.addEventListener("mouseover", superEventHandler.handleMouseOver);
-title.addEventListener("mouseleave", superEventHandler.handleMouseLeave);
-window.addEventListener("resize", superEventHandler.handleResize);
-window.addEventListener("contextmenu", superEventHandler.handleContextMenu);
+title.addEventListener('mouseover', superEventHandler.onMouseOver);
+title.addEventListener('mouseleave', superEventHandler.onMouseLeave);
+window.addEventListener('resize', superEventHandler.onResize);
+window.addEventListener('contextmenu', superEventHandler.onContextMenu);
